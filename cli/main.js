@@ -49,7 +49,8 @@ async function main(args) {
 /**
  * Generates map previews for all given map files.
  * 
- * TODO
+ * This loads up the StarCraft graphics and then iterates over every passed file,
+ * producing an image with the given options.
  */
 async function generateMapPreviews(files, options = {}) {
   const gfx = loadGraphics(options.pathGfx)
