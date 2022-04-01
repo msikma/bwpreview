@@ -6,6 +6,10 @@ Utility for generating preview images of StarCraft: Brood War and Remastered map
 
 All of the actual work of parsing map files and generating the images is done by the [scm-extractor](https://github.com/ShieldBattery/scm-extractor) and [bw-chk](https://github.com/ShieldBattery/bw-chk) libraries made by [the ShieldBattery project](https://shieldbattery.net/). To make it work, you need the required tileset, sprite and unit graphics from StarCraft.
 
+<p align="center"><img align="center" src="resources/Eclipse 1.2 [preview].avif" alt="Example image (Eclipse 1.2)" width="657"></p>
+
+This script is designed around two common use cases: generating lossless, full-size PNG images of maps, and generating smaller AVIF preview files for use on the web.
+
 ## Usage
 
 After installation, see `bwpreview --help` for usage information:
