@@ -28,7 +28,7 @@ async function unpackArgs(args) {
     args.pathRel = path.resolve(args.pathRel)
   }
 
-  return pick(args, ['imgSkip', 'imgType', 'imgSize', 'useInternalName', 'nameSuffix', 'outQuiet', 'outFlatten', 'pathGfx', 'pathOut', 'pathRel'])
+  return pick(args, ['obsSkip', 'imgSkip', 'imgType', 'imgSize', 'useInternalName', 'nameSuffix', 'outQuiet', 'outFlatten', 'pathGfx', 'pathOut', 'pathRel'])
 }
 
 /**
