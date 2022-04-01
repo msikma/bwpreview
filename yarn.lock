@@ -553,10 +553,10 @@ scm-extractor@^1.0.6:
     implode-decoder "^1.0.0"
     stream-splicer "^2.0.0"
 
-sctoolsdata@^0.1.2:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/sctoolsdata/-/sctoolsdata-0.1.3.tgz#ca345c44cfe3674afaa7457632dc1e7ea141f205"
-  integrity sha512-R71wPVd2QghrCkqrB7+bvSWrIh3ZElC7CBpeLLM8J5smUtYCUWQi9H7gCF8Lmte/moB722mmj/ps+BrZHHsk5Q==
+sctoolsdata@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/sctoolsdata/-/sctoolsdata-0.1.4.tgz#1ad6fc2e9fb9f528dd89727832700d257380dbcb"
+  integrity sha512-wMjj4PxSxc49qSJWLrfz51SH1dSCffzlq8qjOuje+ydsi1u3pJ7j9IH1CAK5w+2VEceQm510hnC9blF7ANy3VQ==
 
 semver@^7.3.5:
   version "7.3.5"
