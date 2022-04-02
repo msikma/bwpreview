@@ -44,6 +44,67 @@ optional arguments:
 
 The path to the StarCraft graphics defaults to `~/.config/bwpreview`. If an output path is not specified, the images are saved to the current directory.
 
+### Examples
+
+Let's say we've got a collection of maps at `~/BWmaps/`, with maps being grouped together in subdirectories.
+
+To generate full-size images for each of them, putting the images in the same location as the original map file, we can do the following:
+
+```
+bwpreview -d . --preset full
+```
+
+Here's an example of how that works:
+
+```
+$ cd ~/BWmaps/
+$ ls -l ASL\ S12/
+.rwx------  87k msikma 19 Jul  2021 (4)GOOD NIGHT 1.3.scx
+.rwx------ 461k msikma  5 Jul  2021 (4)Largo_1.4.scx
+.rwx------  94k msikma  8 Jul  2021 (4)Lemon 0.95.scx
+.rwx------  73k msikma 14 Jul  2021 (4)Revolver0.95.scx
+$ ls -l BSL\ S13/
+.rwxr-xr-x@  42k msikma 24 Nov  2019 (2)Heartbreak Ridge 2.1.scx
+.rwxr-xr-x@  71k msikma  1 Oct  2021 (2)Vertebrae_1.33(n).scm
+.rwxr-xr-x@  91k msikma  1 Oct  2021 (3)Ascension_1.0.scx
+.rwxr-xr-x@  42k msikma 29 Jul  2018 (3)Aztec 2.1.scx
+.rwxr-xr-x@  89k msikma  1 Oct  2021 (4)GOOD NIGHT 1.31.scx
+.rwxr-xr-x@  73k msikma  1 Oct  2021 (4)Revolver1.0.scx
+.rwxr-xr-x@  98k msikma  1 Oct  2021 (4)Wavelet_2.06(n).scx
+$ bwpreview -d . --preset full
+Generated image: ASL S12/(4)GOOD NIGHT 1.3.png (png, 4096x4096, 3155 ms, 7.88 MB)
+Generated image: ASL S12/(4)Largo_1.4.png (png, 4096x4096, 3001 ms, 8.88 MB)
+Generated image: ASL S12/(4)Lemon 0.95.png (png, 4096x4096, 1667 ms, 8.14 MB)
+Generated image: ASL S12/(4)Revolver0.95.png (png, 4096x4096, 1496 ms, 6.39 MB)
+Generated image: BSL S13/(2)Heartbreak Ridge 2.1.png (png, 4096x3072, 2994 ms, 6.22 MB)
+Generated image: BSL S13/(2)Vertebrae_1.33(n).png (png, 3584x4096, 1585 ms, 8.62 MB)
+Generated image: BSL S13/(3)Ascension_1.0.png (png, 4096x4096, 3651 ms, 8.42 MB)
+Generated image: BSL S13/(3)Aztec 2.1.png (png, 4096x4096, 1440 ms, 8.84 MB)
+Generated image: BSL S13/(4)GOOD NIGHT 1.31.png (png, 4096x4096, 1750 ms, 7.93 MB)
+Generated image: BSL S13/(4)Revolver1.0.png (png, 4096x4096, 1492 ms, 6.39 MB)
+Generated image: BSL S13/(4)Wavelet_2.06(n).png (png, 4096x4096, 1959 ms, 7.84 MB)
+```
+
+If we instead want just small preview files, and we want to save them all to a flat structure, we can do the following instead:
+
+```
+$ mkdir map_previews
+$ bwpreview -d . --preset preview --out-path ./map_previews --flatten
+Generated image: map_previews/(4)GOOD NIGHT 1.3-preview.avif (avif, 1000x1000, 1961 ms, 263.77 kB)
+Generated image: map_previews/(4)Largo_1.4-preview.avif (avif, 1000x1000, 2132 ms, 304.36 kB)
+Generated image: map_previews/(4)Lemon 0.95-preview.avif (avif, 1000x1000, 2009 ms, 285.33 kB)
+Generated image: map_previews/(4)Revolver0.95-preview.avif (avif, 1000x1000, 1784 ms, 228.55 kB)
+Generated image: map_previews/(2)Heartbreak Ridge 2.1-preview.avif (avif, 1000x750, 3479 ms, 184.5 kB)
+Generated image: map_previews/(2)Vertebrae_1.33(n)-preview.avif (avif, 875x1000, 3580 ms, 311.09 kB)
+Generated image: map_previews/(3)Ascension_1.0-preview.avif (avif, 1000x1000, 3889 ms, 247.8 kB)
+Generated image: map_previews/(3)Aztec 2.1-preview.avif (avif, 1000x1000, 1951 ms, 264.51 kB)
+Generated image: map_previews/(4)GOOD NIGHT 1.31-preview.avif (avif, 1000x1000, 3354 ms, 264.84 kB)
+Generated image: map_previews/(4)Revolver1.0-preview.avif (avif, 1000x1000, 1788 ms, 228.55 kB)
+Generated image: map_previews/(4)Wavelet_2.06(n)-preview.avif (avif, 1000x1000, 2582 ms, 318.27 kB)
+```
+
+Note that the generated previews are much smaller in both image size and in filesize, and that all resulting files are in the same directory as opposed to in a directory structure like before.
+
 ## Graphics
 
 To be able to generate preview images, you'll need to extract the required graphics from StarCraft.
