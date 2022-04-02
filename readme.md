@@ -48,6 +48,10 @@ The path to the StarCraft graphics defaults to `~/.config/bwpreview`. If an outp
 
 To be able to generate preview images, you'll need to extract the required graphics from StarCraft.
 
+**[A copy of the required graphics can be found here](https://archive.org/details/StarCraftMapGraphics)** (18.4M), provided for convenience reasons.
+
+You can also extract them from the game files directly using a program such as [CascView](http://www.zezula.net/en/casc/main.html).
+
 The following files are needed:
 
 * all files listed in [units.js](https://github.com/ShieldBattery/bw-chk/blob/master/units.js) and [sprites.js](https://github.com/ShieldBattery/bw-chk/blob/master/sprites.js) files from [bw-chk](https://github.com/ShieldBattery/bw-chk);
