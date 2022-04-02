@@ -15,9 +15,10 @@ This script is designed around two common use cases: generating lossless, full-s
 After installation, see `bwpreview --help` for usage information:
 
 ```
-usage: bwpreview [-h] [-v] [-d PATH] [-m] [-f] [-q] [--preset NAME] [--suffix STR]
-                 [--type TYPE] [--size PX] [--skip-existing] [--skip-obs]
-                 [--rel-path PATH] [--out-path PATH] [--gfx-path PATH] [FILE ...]
+usage: bwpreview [-h] [-v] [-d PATH [PATH ...]] [-m] [-f] [-q] [--preset NAME]
+                 [--suffix STR] [--type TYPE] [--size PX] [--skip-existing]
+                 [--skip-obs] [--rel-path PATH] [--out-path PATH] [--gfx-path PATH]
+                 [FILE ...]
 
 Utility for generating preview images of StarCraft: Brood War and Remastered maps.
 
@@ -27,7 +28,8 @@ positional arguments:
 optional arguments:
   -h, --help           show this help message and exit
   -v, --version        show program's version number and exit
-  -d PATH, --dir PATH  directory containing StarCraft map files to process
+  -d PATH [PATH ...], --dir PATH [PATH ...]
+                       directory containing StarCraft map files to process
   -m, --map-name       use map name, not filename, to determine output filename
   -f, --flatten        flatten output directory structure
   -q, --quiet          no output except for errors

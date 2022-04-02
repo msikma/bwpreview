@@ -17,7 +17,7 @@ const parser = new ArgumentParser({
 })
 parser.add_argument('FILE', {help: 'StarCraft map files (.scm, .scx) to generate images for', nargs: '*'})
 parser.add_argument('-v', '--version', {action: 'version', version: pkgData.version})
-parser.add_argument('-d', '--dir', {help: 'directory containing StarCraft map files to process', dest: 'dir', default: null, metavar: 'PATH'})
+parser.add_argument('-d', '--dir', {help: 'directory containing StarCraft map files to process', dest: 'dir', default: null, metavar: 'PATH', nargs: '+'})
 parser.add_argument('-m', '--map-name', {help: 'use map name, not filename, to determine output filename', dest: 'useInternalName', action: 'store_true'})
 parser.add_argument('-f', '--flatten', {help: 'flatten output directory structure', dest: 'outFlatten', action: 'store_true'})
 parser.add_argument('-q', '--quiet', {help: 'no output except for errors', dest: 'outQuiet', action: 'store_true'})
