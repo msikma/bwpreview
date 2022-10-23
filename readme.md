@@ -10,6 +10,11 @@ All of the actual work of parsing map files and generating the images is done by
 
 This script is designed around two common use cases: generating lossless, full-size PNG images of maps, and generating smaller AVIF preview files for use on the web.
 
+## Installation
+
+1. Install nodejs and npm: https://nodejs.org/en/download/
+2. Run `npm install -g bwpreview .`
+
 ## Usage
 
 After installation, see `bwpreview --help` for usage information:
