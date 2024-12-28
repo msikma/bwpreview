@@ -2,6 +2,9 @@
 
 # bwpreview
 
+> [!WARNING]  
+> This library is deprecated. It's recommended that you use [bwmapimage](https://github.com/msikma/bwmapimage) as replacement.
+
 Utility for generating preview images of StarCraft: Brood War and Remastered maps (`.scm` and `.scx` files).
 
 All of the actual work of parsing map files and generating the images is done by the [scm-extractor](https://github.com/ShieldBattery/scm-extractor) and [bw-chk](https://github.com/ShieldBattery/bw-chk) libraries made by [the ShieldBattery project](https://shieldbattery.net/). To make it work, you need the required tileset, sprite and unit graphics from StarCraft.
